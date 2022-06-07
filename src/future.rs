@@ -1,7 +1,7 @@
 use bevy::prelude::Mesh;
 use bevy::render::mesh::{Indices, PrimitiveTopology};
 /// LITERALLY COPY PASTED OUT OF DEV BRANCH BEVY
-/// FIXME: replace
+/// TODO: replace
 
 /// A regular polygon in the xy plane
 #[derive(Debug, Copy, Clone)]

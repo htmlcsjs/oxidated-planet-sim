@@ -1,8 +1,9 @@
-use crate::GlobalSettings;
 use bevy::prelude::*;
 use bevy_inspector_egui::bevy_egui::{EguiContext, EguiPlugin};
 use bevy_inspector_egui::egui::Slider;
 use bevy_inspector_egui::{egui, InspectorPlugin, WorldInspectorPlugin};
+
+use crate::GlobalSettings;
 
 pub struct DebugPlugin;
 

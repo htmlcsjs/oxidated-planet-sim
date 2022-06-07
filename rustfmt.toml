@@ -1,0 +1,5 @@
+edition = "2021"
+
+# todo: add these when stable
+# imports_granularity = "Module"
+# group_imports = "StdExternalCrate"

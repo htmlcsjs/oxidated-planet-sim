@@ -1,12 +1,14 @@
-mod debug;
-mod future;
-
-use crate::debug::DebugPlugin;
 use bevy::prelude::*;
 use bevy::render::color::Color;
 use bevy::sprite::MaterialMesh2dBundle;
 use bevy::window::PresentMode;
 use bevy_inspector_egui::Inspectable;
+
+use crate::debug::DebugPlugin;
+
+mod debug;
+mod future;
+mod planet;
 
 pub const CLEAR: Color = Color::rgb(0.1, 0.2, 0.3);
 
