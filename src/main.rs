@@ -1,12 +1,12 @@
 mod debug;
 mod future;
 
+use crate::debug::DebugPlugin;
 use bevy::prelude::*;
 use bevy::render::color::Color;
 use bevy::sprite::MaterialMesh2dBundle;
 use bevy::window::PresentMode;
 use bevy_inspector_egui::Inspectable;
-use crate::debug::DebugPlugin;
 
 pub const CLEAR: Color = Color::rgb(0.1, 0.2, 0.3);
 
@@ -26,7 +26,7 @@ fn main() {
             ..default()
         })
         .insert_resource(GlobalSettings {
-            meters_to_pix: 250000.0
+            meters_to_pix: 250000.0,
         })
         .add_plugins(DefaultPlugins)
         .add_plugin(DebugPlugin)
@@ -39,7 +39,11 @@ fn spawn_camera(mut commands: Commands) {
     commands.spawn_bundle(OrthographicCameraBundle::new_2d());
 }
 
-fn spawn_planet(mut commands: Commands, mut meshes: ResMut<Assets<Mesh>>, mut materials: ResMut<Assets<ColorMaterial>>) {
+fn spawn_planet(
+    mut commands: Commands,
+    mut meshes: ResMut<Assets<Mesh>>,
+    mut materials: ResMut<Assets<ColorMaterial>>,
+) {
     commands
         .spawn_bundle(MaterialMesh2dBundle {
             mesh: meshes.add(future::Circle::new(50.).into()).into(),

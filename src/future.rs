@@ -3,7 +3,6 @@ use bevy::render::mesh::{Indices, PrimitiveTopology};
 /// LITERALLY COPY PASTED OUT OF DEV BRANCH BEVY
 /// FIXME: replace
 
-
 /// A regular polygon in the xy plane
 #[derive(Debug, Copy, Clone)]
 pub struct RegularPolygon {
